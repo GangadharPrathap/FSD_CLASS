@@ -1,0 +1,81 @@
+ .parent{
+    height: 100svh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: black;
+}
+.cube{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 0px;
+    animation: anime 5s infinite linear;
+    transform-style: preserve-3d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+
+}
+.front,.back,.left,.right,.top,.bottom{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+    border: 2px solid white;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.left{
+    transform: rotateX(90deg) translateZ(150px);
+}
+.right{
+    transform: rotateX(90deg) translateZ(-150px);
+}
+.top{
+    transform: rotateY(90deg) translateZ(-150px);
+}
+.bottom{
+    transform: rotateY(90deg) translateZ(150px);
+}
+.front{
+    transform: translateZ(-150px);
+}
+.back{
+    transform: translateZ(150px);
+}
+@keyframes anime{
+    100%{
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+.block1{
+    background-color: red;
+    border: 2px solid black;
+}
+.block2{
+    background-color: green;
+    border: 2px solid black;
+}
+.block3{
+    background-color: blue;
+    border: 2px solid black;
+}
+.block4{
+    background-color: yellow;
+    border: 2px solid black;
+}
+.block5{
+    background-color: orange;
+    border: 2px solid black;
+}
+.block6{
+    background-color: white;
+    border: 2px solid black;
+}

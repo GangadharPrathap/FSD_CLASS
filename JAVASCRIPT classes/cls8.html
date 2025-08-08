@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>23-07-2025</title>
+        <style>
+            .lols{
+                width: 100px;
+                height: 100px;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Paragraph-1</p>
+        <p>Paragraph-2</p>
+        <div class="demo">Demo-tag</div>
+        <span class="demo" id="lol">Span-tag</span>
+        <div class="lols"></div>
+        <button onclick="fun()">Click me to change the color</button>
+        <script>
+            function fun(){
+                document.getElementsByClassName("lols")[0].style.background="red"
+                console.log("color has been changed to red")
+            }
+            console.log(document.getElementsByTagName("p"))
+            console.log(document.getElementsByClassName("demo"))
+            console.log(document.getElementById("lol"))
+            console.log(document.querySelector(".demo"))
+            console.log(document.querySelectorAll("p"))
+        </script>
+    </body>
+</html>

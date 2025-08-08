@@ -1,0 +1,94 @@
+body{
+    height: 100svh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* -------------Cube------------------ */
+.cube{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 0px;
+    animation: anime 5s infinite linear;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+.cube div{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+    border: 5px dotted white;
+    position: absolute;
+}
+.left{
+    transform: rotateX(90deg) translateZ(100px);
+}
+.right{
+    transform: rotateX(90deg) translateZ(-100px);
+}
+.top{
+    transform: rotateY(90deg) translateZ(-100px);
+}
+.bottom{
+    transform: rotateY(90deg) translateZ(100px);
+}
+.front{
+    transform: translateZ(-100px);
+}
+.back{
+    transform: translateZ(100px);
+}
+@keyframes anime{
+    100%{
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+/* -----------Cuboid------------------------ */
+.cuboid{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    left: 0px;
+    animation: anime 5s infinite linear;
+    transform-style: preserve-3d;
+
+}
+.cuboid div{
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+    border: 5px dotted white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+} #top, #bottom{
+    width: 200px;
+    height: 200px;
+}
+.lef{
+    transform: rotateX(90deg) translateZ(100px);
+}
+.righ{
+    transform: rotateX(90deg) translateZ(-100px);
+}
+.to{
+    transform: rotateY(90deg) translateZ(-100px);
+}
+.botto{
+    transform: rotateY(90deg) translateZ(300px);
+}
+.fron{
+    transform: translateZ(-100px);
+}
+.bac{
+    transform: translateZ(100px);
+}

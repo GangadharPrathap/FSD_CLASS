@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh app clone project</title>
+    <link rel="stylesheet" href="josh.css">
+    <style>
+          * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-color: #f1f3f6;
+  }
+  .header{
+    width: 100%;
+    height: 10svh;
+    background-color: pink;
+  }
+.footer{
+    width: 100%;
+    height: 40svh;
+    display: grid;
+
+}
+.emptylogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+}
+.logos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+    overflow: hidden;
+}.logos div{
+    display: grid;
+    justify-content: space-around;
+    padding: 20px;
+}
+.logos img,.connect img{
+    width: 200px;
+    height: 200px;
+}
+.ratings img{
+    padding: 10px;
+    width: 150px;
+    height: 80px;
+}
+.below{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 20px;
+}.links{
+    width: 100%;
+    height: 100%;
+}.links a,.portfolio a{
+    text-decoration-line: none;
+    color: black;
+    line-height: 2;
+}.connect img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+}
+    </style>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30-06-2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      width: 100%;
+    }
+
+    h1, p {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .header {
+      background-color: #2d2d2d;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .img img {
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .hid {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .hid > div {
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .hid > div:hover {
+      background-color: #4f7b7d;
+    }
+
+    .logs {
+      background: #5de086;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .logs:hover {
+      background-color: #3cbf6e;
+    }
+
+    .dropdown {
+      display: none;
+      position: relative;
+    }
+
+    .dropdown-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      overflow: hidden;
+      z-index: 100;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dropdown-item:hover {
+      background-color: #4f7b7d;
+      color: white;
+    }
+
+    @media (max-width: 340px) {
+      .hid {
+        display: none;
+      }
+
+      .dropdown {
+        display: block;
+      }
+    }
+
+    ul {
+      padding-left: 40px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    p ul {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MEDIA QUERIES</h1>
+  <p>
+    Media queries help maintain layout responsiveness across screen sizes:
+    <ul>
+      <li><strong>max-width</strong>: Applies up to a max screen size</li>
+      <li><strong>min-width</strong>: Applies from a minimum screen size onward</li>
+    </ul>
+    Common device breakpoints:
+    <ul>
+      <li>Desktop: 1440px</li>
+      <li>Laptop: 1024px</li>
+      <li>Mobiles:
+        <ul>
+          <li>Android 13 and below: ~320px</li>
+          <li>Android 14+: 375px (portrait), 420px (landscape)</li>
+        </ul>
+      </li>
+    </ul>
+  </p>
+
+  <div class="header">
+    <div class="img">
+      <img src="https://maya.technicalhub.io/assets/images/logo/logo-white.png" alt="Logo" />
+    </div>
+    <div class="hid">
+      <div class="maya">My Maya</div>
+      <div class="owl">Owl Code</div>
+      <div class="Apt">Apt Logic</div>
+      <div class="ats">ATS</div>
+      <div class="contact">Contact</div>
+    </div>
+    <div class="login"><div class="logs">Login</div></div>
+    <div class="dropdown">
+      <button class="dropdown-toggle" aria-haspopup="true">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <div class="dropdown-menu">
+        <div class="dropdown-item">My Maya</div>
+        <div class="dropdown-item">Owl Code</div>
+        <div class="dropdown-item">Apt Logic</div>
+        <div class="dropdown-item">ATS</div>
+        <div class="dropdown-item">Contact</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

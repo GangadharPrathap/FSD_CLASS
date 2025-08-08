@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-07-2025</title>
+</head>
+<body>
+    <h1>JAVASCRIPT CLASS 5</h1>
+    <p> Hanumathu sir class: <br>
+        Errors in javascript: <br>
+        <ul>
+            <li>Syntax error</li>
+            <p>Mistakes that occur while typing the code in javascript</p><br>
+            <li>Type error</li>
+            <p>Mistakes that occur while we print the code or output which is in different type than that we declare</p><br>
+            <li>Reference error</li>
+            <p>It Occurs when we print or try to access an undeclared variable in the code</p><br>
+            <li>Range error</li>
+            <p>The floating numbers can be added to the values of ranging in 0 to 100 only in javascript</p>
+        </ul> <br>
+        Error handling in javascript: <br>
+        <ul>
+            <li>try</li>
+            <p>If the logic is true then we will get the output of that code present in the try block</p> <br>
+            <li>catch</li>
+            <p>If the logic is false then we will get the output of that code present in the catch block</p> <br>
+            <li>finally</li>
+            <p>The final block Excutes only when one of the error handling funtions gets complied like if either try or catch gets satisfied then we get the codecompiled along the satisfied block</p>
+        </ul><br>
+            <script>
+        // Function to demonstrate different error types
+        function demonstrateErrors() {
+        console.log("=== JavaScript Error Types and Handling ===\n");
+
+        // 1. TypeError: using a method on the wrong type
+        try {
+            let num = 10;
+            num.toUpperCase();  // num is not a string, so this throws a TypeError
+        } catch (error) {
+            if (error instanceof TypeError) {
+            console.log("Caught TypeError:", error.message);
+            }
+        }
+
+        // 2. ReferenceError: accessing an undeclared variable
+        try {
+            console.log(undefinedVariable); // variable not declared
+        } catch (error) {
+            if (error instanceof ReferenceError) {
+            console.log("Caught ReferenceError:", error.message);
+            }
+        }
+
+        // 3. RangeError: using a number outside of its allowed range
+        try {
+            let arr = new Array(-5); // arrays can't have negative lengths
+        } catch (error) {
+            if (error instanceof RangeError) {
+            console.log("Caught RangeError:", error.message);
+            }
+        }
+
+        // 4. SyntaxError: invalid syntax using eval (only way to trigger it at runtime)
+        try {
+            eval("let x === 5"); // incorrect syntax
+        } catch (error) {
+            if (error instanceof SyntaxError) {
+            console.log("Caught SyntaxError:", error.message);
+            }
+        }
+
+        // 5. Custom Error + finally block
+        try {
+            let age = -1;
+            if (age < 0) {
+            throw new Error("Age cannot be negative!");
+            }
+        } catch (error) {
+            console.log("Caught Custom Error:", error.message);
+        } finally {
+            console.log("Finally block always runs — cleanup, logs, etc.");
+        }
+        }
+
+        demonstrateErrors();
+
+    </script>
+
+        Hoisting in javascript: <br>
+        This concept is only applicable to the VAR variable datatype
+        <script>
+            // -------------------
+            // Function Declaration
+            // -------------------
+            // ✅ Function declarations are hoisted completely
+            greet(); // Output: Hello from a hoisted function!
+
+            function greet() {
+            console.log("Hello from a hoisted function!");
+            }
+
+            // -------------------
+            // Function Expression (using var)
+            // -------------------
+            // ❌ Only variable 'sayHi' is hoisted, not the function assignment
+            try {
+            sayHi(); // ❌ TypeError: sayHi is not a function
+            } catch (e) {
+            console.log(e.message);
+            }
+
+            var sayHi = function() {
+            console.log("Hello from a function expression!");
+            };
+
+            sayHi(); // ✅ Works here
+
+            // -------------------
+            // Hoisting with var
+            // -------------------
+            // ✅ Variable declaration is hoisted, but not its value
+            console.log(myVar); // Output: undefined
+
+            var myVar = 10;
+            console.log(myVar); // Output: 10
+
+            // -------------------
+            // Hoisting with let
+            // -------------------
+            // ❌ let is hoisted but in "Temporal Dead Zone" (TDZ)
+            try {
+            console.log(myLet); // ❌ ReferenceError
+            } catch (e) {
+            console.log(e.message);
+            }
+
+            let myLet = 20;
+            console.log(myLet); // Output: 20
+
+            // -------------------
+            // Hoisting with const
+            // -------------------
+            // ❌ const is also in TDZ and must be initialized at declaration
+            try {
+            console.log(myConst); // ❌ ReferenceError
+            } catch (e) {
+            console.log(e.message);
+            }
+
+            const myConst = 30;
+            console.log(myConst); // Output: 30
+
+        </script>
+    </p>
+</body>
+</html>

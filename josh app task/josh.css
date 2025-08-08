@@ -1,0 +1,143 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f1f3f6;
+    }
+    .header{
+        width: 100%;
+        height: 15svh;
+        background-color: pink;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }.specs{
+        padding: 4% 2% 9% 7%;
+        width: 168px;
+        height: 77px;
+        object-fit: contain;
+    }
+    .specs img{
+        width: 158px;
+        height: 67px;
+        object-fit: contain;
+    }
+    .headcontent{
+        width: 100%;
+        height: 100%;
+        background-color: #555;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+    }
+    .home,.skills,.education,.por
+    /* footer content */
+    .footer {
+      width: 100%;
+      background-color: #f1f3f6;
+    }
+
+    .emptylogo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 900px;
+      width: 100%;
+      justify-items: center;
+    }
+
+    .logos img {
+      width: 120px;
+      height: 100%;
+    }
+
+    .below {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      padding: 60px 80px;
+      gap: 20px;
+      background-color: #f1f3f6;
+    }
+
+    .spec {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spec img {
+    width: 168px;
+    height: 77px;
+    object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .ratings {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ratings .imgs {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ratings img {
+      width: 120px;
+      height: 50px;
+      object-fit: contain;
+    }
+    .spec{
+        position: relative;
+        top: 27px;
+        left: -40%;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .links, .portfolio, .connect {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .links h3, .portfolio h3, .connect h3 {
+      margin-bottom: 10px;
+    }
+
+    .links a, .portfolio a {
+      text-decoration: none;
+      color: black;
+      margin: 4px 0;
+    }
+
+    .connect a {
+      display: inline-flex;
+      align-items: center;
+      margin: 5px 0;
+    }
+
+    .connect img {
+      width: 120px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+      color: #555;
+    }

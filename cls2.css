@@ -1,0 +1,112 @@
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "montserrat", sans-serif;
+    background-color: azure;
+}
+.left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left img{
+    width: 80%;
+}
+.left h4{
+    margin: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.left span{
+    text-transform: uppercase;
+    color: violet;
+}.right{
+    width: 60%;
+    color: aliceblue;
+}
+.right-content{
+    display: flex;
+    align-items: center;
+    margin: 20px 0 ;
+}.person{
+    background-color:  #ff007f;
+    padding: 5px 0 5px 30px;
+    margin: 30px 0;
+    box-shadow: 0 10px 20px pink;
+}
+.right-content i{
+    width: 35px;
+    height: 35px;
+    border:2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: violet;
+    margin-right: 20px;
+}
+.person h4{
+    text-transform: uppercase;
+}.phone{
+    padding-left: 30px;
+}.email{
+    padding-left: 20px;
+}.Address{
+    padding-left: 10px;
+}.card:hover {
+    transform: rotateY(180deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.back a {
+    color: #555;
+    font-size: 24px;
+    transition: color 0.2s;
+}
+ .back a:hover {
+    color:  white;
+}
+.cardw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}.card {
+    width: 550px;
+    height: 300svh;
+    background-color: transparent;
+    box-shadow: 0 10px 20px black;
+    position: relative;
+    transition: transform 1s linear;
+    transform-style: preserve-3d;
+}
+.front{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: linear-gradient(135deg, #000000, #1a1a1a, #ff007f, #1a1a1a, #000000);
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.back{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background: linear-gradient(135deg, #000000, #1a1a1a, #ff007f, #1a1a1a, #000000);
+    font-size: 25px;
+    color: aliceblue;
+    gap: 15px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Grid Generator</title>
+</head>
+<body>
+
+    <div>
+        <h1>Dynamic Grid Creator</h1>
+
+        <div>
+            <div>
+                <label for="rin">Number of Rows:</label>
+                <input type="number" id="rin" value="5" >
+            </div>
+
+            <div>
+                <label for="cin">Number of Columns:</label>
+                <input type="number" id="cin" value="5">
+            </div>
+        </div>
+
+        <button onclick="createGrid()">
+            Generate Grid
+        </button>
+
+        <div id="gridContainer">
+            Your grid will appear here.
+        </div>
+    </div>
+
+    <script>
+        function createGrid() {
+            var rin = document.getElementById('rin');
+            var cin = document.getElementById('cin');
+            var gridContainer = document.getElementById('gridContainer');
+
+            var numRows = Number(rin.value);
+            var numCols = Number(cin.value);
+
+            gridContainer.innerHTML = '';
+
+            var table = document.createElement('table');
+            table.setAttribute('border', '1px','solid','black');
+
+            for (var row = 0; row < numRows; row++) {
+                var tr = document.createElement('tr');
+
+                for (var col = 0; col < numCols; col++) {
+                    var td = document.createElement('td');
+                    td.setAttribute('width', '100px');
+                    td.setAttribute('height', '100px');
+                    td.style.backgroundColor = 'pink';
+                    td.setAttribute('border', '1');
+                    td.innerHTML = col;
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+            gridContainer.appendChild(table);
+        }
+    </script>
+</body>
+</html>

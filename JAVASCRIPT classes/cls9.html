@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Cursor Follower</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: black;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .side {
+            color: white;
+            width: 200px;
+            height: 100svh;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(35, 3, 78);
+            align-items: end;
+            cursor: pointer;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: left 0.5s linear;
+            z-index: 100;
+        }
+
+        .side div {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            font-size: 20px;
+            background-color: rgb(115, 140, 174);
+            border-bottom: 2px solid black;
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+
+        .side div:hover {
+            background-color: red;
+            box-shadow: 0 0 10px black;
+        }
+
+        .side span {
+            width: fit-content;
+            font-size: 30px;
+            position: relative;
+            right: 10px;
+            margin-top: 10px;
+        }
+
+        #lol {
+            color: wheat;
+            font-size: 30px;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+            z-index: 0;
+        }
+
+        .circle {
+            position: fixed;
+            transition: transform 0.5s linear;
+            z-index: 9999;
+            width: fit-content;
+            padding: 5px;
+            border: 2px solid white;
+            border-radius: 50%;
+            color: white;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="lol" onclick="lol()">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <div class="side">
+        <span onclick="fun()">&times;</span>
+        <div>HOME</div>
+        <div>ABOUT</div>
+        <div>CONTACT</div>
+        <div>OWL CODE</div>
+        <div>APT LOGIC</div>
+    </div>
+
+    <div class="circle">😁</div>
+
+    <script>
+        function fun() {
+            document.getElementsByClassName("side")[0].style.left = "-200px";
+        }
+
+        function lol() {
+            document.getElementsByClassName("side")[0].style.left = "0px";
+        }
+
+        const emojiFollowerDiv = document.getElementsByClassName('circle')[0];
+
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            emojiFollowerDiv.style.left = `${mouseX}px`;
+            emojiFollowerDiv.style.top = `${mouseY}px`;
+        });
+    </script>
+</body>
+</html>
